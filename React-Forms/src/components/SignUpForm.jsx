@@ -38,7 +38,7 @@ export default function SignUpForm({ setToken }) {
       <form onSubmit={handleSubmit}>
 
         <h1>Sign Up </h1>
-        
+
         {error && <p>{error}</p>}{" "}
         {submitted && <p> Click "Authenticate Token" to complete sign up.</p>}
 
@@ -50,6 +50,7 @@ export default function SignUpForm({ setToken }) {
               value={username} // updates as state updates
               onChange={(e) => setUsername(e.target.value)}
               placeholder="Username"
+              minLength={"8"}
               required
             />
           </label>

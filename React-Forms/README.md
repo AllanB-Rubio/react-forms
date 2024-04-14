@@ -1,8 +1,19 @@
-# React + Vite
+# React Form 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+This project is a React application that allows users to sign up and authenticate using a token-based authentication system. It includes two main components: SignUpForm and Authenticate. SignUpForm allows users to sign up by providing a username and password, while Authenticate allows users to authenticate using a token.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used 
+
+- React
+- Vite
+- HTML
+- CSS
+- JavaScript
+
+## Deployment Link 
+https://661c6835e487e3cf84cac6e4--mellow-sprinkles-9a3058.netlify.app/
+
+## Created by 
+Allan Rubio 
