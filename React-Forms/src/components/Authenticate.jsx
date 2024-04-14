@@ -30,15 +30,15 @@ export default function Authenticate({ token }) {
   }
 
   return (
-    <div>
+    <div className="wrapper">
       <h2>Authenticate</h2>
 
-      {successMessage && <p>{successMessage}</p>}
-      {username && <p> Welcome  {username} ! </p>}
+      {successMessage && <p className="success-message">{successMessage}</p>}
+      {username && <p className="welcome-message"> Welcome  {username}  </p>}
 
-      {error && <p>{error}</p>}
+      {error && <p className="error-message">{error}</p>}
 
-      <button onClick={handleClick}> Authenticate Token!</button>
+      <button className="btn" onClick={handleClick}> Authenticate Token!</button>
     </div>
   );
 }

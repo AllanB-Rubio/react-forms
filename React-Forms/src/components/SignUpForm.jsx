@@ -4,9 +4,11 @@ export default function SignUpForm({ setToken }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
+  const [submitted, setSubmitted] = useState(false);
 
   async function handleSubmit(e) {
     e.preventDefault();
+    setSubmitted(true);
 
     try {
       const response = await fetch(
@@ -31,32 +33,45 @@ export default function SignUpForm({ setToken }) {
   }
 
   return (
-    <>
-      <h2>Sign Up </h2>
-      {error && <p>{error}</p>}{" "}
-      {/* The double && is being used for conditional rendering: it renders the <p> element only if error is truthy*/}
+    <div className="wrapper">
+
       <form onSubmit={handleSubmit}>
-        <label>
-          Username:{" "}
-          <input
-            value={username} // updates as state updates
-            onChange={(e) => setUsername(e.target.value)}
-          />
-        </label>
-        <br />
 
-        <label>
-          Password:{" "}
-          <input
-            type="password"
-            value={password} // updates as state updates
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </label>
-        <br />
+        <h1>Sign Up </h1>
+        
+        {error && <p>{error}</p>}{" "}
+        {submitted && <p> Click "Authenticate Token" to complete sign up.</p>}
 
-        <button> Submit</button>
+        <div>
+          <label>
+            {/* Username:{" "} */}
+            <input
+              className="input-box"
+              value={username} // updates as state updates
+              onChange={(e) => setUsername(e.target.value)}
+              placeholder="Username"
+              required
+            />
+          </label>
+        </div>
+
+        <div>
+          <label>
+            {/* Password:{" "} */}
+            <input
+              className="input-box"
+              type="password"
+              value={password} // updates as state updates
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Password"
+              required
+            />
+          </label>
+        </div>
+
+        <button className="btn"> Submit</button>
+
       </form>
-    </>
+    </div>
   );
 }
