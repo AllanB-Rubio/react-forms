@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0300,400,500,600,700,800,900&display=swap');
 
 * {
   margin: 0;
@@ -63,14 +64,22 @@ input.input-box::placeholder {
  color: hsla(120, 100%, 99%, 0.694);
 }
 
-/* for icons in input box , which i dont have right now */
-input.input-box i {
+.input-box + .user-icon {
   position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translate(-50%);
-  font-size: 20px;
+  right: 60px;
+  top: 35%;
+  transform: translateY(-50%); 
+  font-size: 16px;
 }
+
+.input-box + .lock-icon {
+  position: absolute;
+  right: 60px;
+  top: 65%;
+  transform: translateY(-50%); 
+  font-size: 16px;
+}
+
 
 .wrapper .btn {
   width: 100%;
@@ -124,4 +133,3 @@ input.input-box i {
 
 
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0300,400,500,600,700,800,900&display=swap')

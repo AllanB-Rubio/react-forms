@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaUser, FaLock } from "react-icons/fa";
 
 export default function SignUpForm({ setToken }) {
   const [username, setUsername] = useState("");
@@ -36,9 +37,7 @@ export default function SignUpForm({ setToken }) {
     <div className="wrapper">
 
       <form onSubmit={handleSubmit}>
-
         <h1>Sign Up </h1>
-
         {error && <p>{error}</p>}{" "}
         {submitted && <p> Click "Authenticate Token" to complete sign up.</p>}
 
@@ -53,6 +52,7 @@ export default function SignUpForm({ setToken }) {
               minLength={"8"}
               required
             />
+            <div className="user-icon"><FaUser /></div>
           </label>
         </div>
 
@@ -67,11 +67,11 @@ export default function SignUpForm({ setToken }) {
               placeholder="Password"
               required
             />
+            <div className="lock-icon"><FaLock /></div>
           </label>
         </div>
 
         <button className="btn"> Submit</button>
-
       </form>
     </div>
   );
