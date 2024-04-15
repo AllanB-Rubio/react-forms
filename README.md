@@ -13,7 +13,7 @@ This project is a React application that allows users to sign up and authenticat
 - JavaScript
 
 ## Deployment Link 
-https://661c6835e487e3cf84cac6e4--mellow-sprinkles-9a3058.netlify.app/
+https://661ca5f8bbe123f726fcba6d--mellow-sprinkles-9a3058.netlify.app/
 
 ## Created by 
 Allan Rubio 
